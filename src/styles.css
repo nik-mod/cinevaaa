@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+a {
+  color: #2256a4;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1 {
+  margin-top: 0;
+}
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 25px 20px;
+}
+header {
+  background: #202737;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.nav a {
+  color: white;
+}
+.nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
+}
+.movies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.movie-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.movie-info {
+  padding: 18px;
+}
+.poster-link {
+  display: block;
+}
+.movie-poster {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+.movie-card h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+.movie-card p {
+  line-height: 1.5;
+}
+.search {
+  max-width: 400px;
+  margin-bottom: 24px;
+}
+.form-box {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 25px;
+  max-width: 450px;
+  margin: 20px auto;
+}
+label {
+  display: block;
+  margin: 14px 0 6px;
+}
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  width: 100%;
+  font: inherit;
+}
+textarea {
+  min-height: 100px;
+}
+button {
+  background: #2256a4;
+  color: white;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background: #19417e;
+}
+button:disabled {
+  opacity: 0.6;
+}
+form button {
+  margin-top: 18px;
+}
+.error {
+  color: #b00020;
+}
+@media (max-width: 750px) {
+  .movies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .movies {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    gap: 12px;
+  }
+}
+
+.movie-detail {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+}
+.detail-poster {
+  width: 240px;
+  max-width: 40%;
+  height: fit-content;
+  border-radius: 6px;
+}
+@media (max-width: 500px) {
+  .movie-detail {
+    flex-direction: column;
+  }
+  .detail-poster {
+    max-width: 100%;
+    width: 210px;
+  }
+}
